@@ -102,11 +102,11 @@ validate_attribute_contains_list = func(type, attribute, required_values) {
 }
 
 ### List of mandatory tags ###
-# mandatory_tags = [
- # Department"DevOps",
- # Billable"true",
+ mandatory_tags = [
+ Department:"DevOps",
+ Billable:"true",
   
- # ]
+  ]
 
 ### Rules ###
 
@@ -115,6 +115,6 @@ tags_validated = validate_attribute_contains_list("aws_instance",
                  "tags", mandatory_tags)
 
 #Main rule
-#main = rule {
- # tags_validated
-#}
+main = rule {
+  tags_validated
+}
